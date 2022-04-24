@@ -1,0 +1,53 @@
+html {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    background-color: #283134;
+    padding: 2rem 3rem;
+    margin: 0%;
+}
+
+#btns {
+    float: right;
+}
+
+.btnReg {
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.417);
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.329);
+}
+
+.btnIng {
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.417);
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.329);
+}
+
+.btnMorado {
+    background-color: blueviolet;
+    color: white;
+}
+
+.btnMorado:hover {
+    background-color: rgba(192, 15, 236, 0.838);
+    transition: 0.5s ease;
+}
+
+.btnMorado:active {
+    background-color: burlywood;
+    transition: 0s ease-in-out;
+}
