@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Register</title>
+    <script src="https://kit.fontawesome.com/44bc3d6f94.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    <title>RegisterBuCar</title>
 </head>
 
 <body>
+    <header>
+        <img src="img/Bucar_Logo.png" width="150">
+    </header>
+    <form class="formulario">
+        <h1>¡Regístrate gratis!</h1>
+        <div class="contenedor">
 
+            <div class="input-cont">
+                <i class="fa-solid fa-user icon"></i>
+                <input type="text" placeholder="Nombre Completo">
+            </div>
+            <div class="input-cont">
+                <i class="fa-solid fa-envelope icon"></i>
+                <input type="text" placeholder="Correo electrónico">
+            </div>
+            <div class="input-cont">
+                <i class="fa-solid fa-key icon"></i>
+                <input type="password" placeholder="Contraseña">
+            </div>
+            <input type="submit" value="Regístrate" class="btn">
+            <!-- El input, línea de arriba, se le agrega la parte donde se almacena los datos (JS)
+            ya que, ahorita, si se ingresan datos, borrará el formulario y lo recargará -->
+            <p>Al registrarte, aceptar nuestras Condiciones de uso y Política de privacidad.</p>
+            <p>¿Ya tienes cuenta?
+                <a class="link" href="login.html">Iniciar sesión</a>
+            </p>
+        </div>
+    </form>
 </body>
 
 </html>

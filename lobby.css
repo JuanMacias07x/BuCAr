@@ -66,7 +66,6 @@ section article {
     border-radius: 1rem;
     padding: 0.27rem 0;
     background-color: rgba(228, 227, 227, 0.824);
-    cursor: pointer;
     text-align: center;
 }
 
@@ -108,6 +107,7 @@ footer a {
     color: azure;
     transition: color 0.6s ease;
     text-decoration: none;
+    text-align: left;
 }
 
 footer a:hover {

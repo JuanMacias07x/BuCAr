@@ -1,0 +1,107 @@
+html {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0px;
+    background: url(img/Trafico.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #283134;
+    padding: 2rem 3rem;
+    margin: 0%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 100%;
+    padding: 15px;
+}
+
+.formulario {
+    background: whitesmoke;
+    margin-top: 150px;
+    padding: 3px;
+}
+
+h1 {
+    text-align: center;
+    color: cadetblue;
+    font-size: 33px;
+    font-family: 'Lato', sans-serif;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: 24px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-cont {
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+
+.icon {
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+
+.btn {
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: cadetblue;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #283134;
+}
+
+p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: solid;
+}
+
+.link {
+    text-decoration: none;
+    color: #283134;
+    font-weight: 600;
+}
+
+.link:hover {
+    color: #283134;
+}
+
+@media(min-width:768px) {
+    .formulario {
+        margin: auto;
+        width: 500px;
+        margin-top: 130px;
+        border-radius: 15px;
+    }
+}
+
+a:hover {
+    color: rgb(0, 255, 238);
+}
+
+a:active {
+    color: greenyellow;
+    transition: 0.3s ease;
+}
