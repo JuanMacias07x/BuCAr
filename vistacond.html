@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BuCar - Admin</title>
+    <title>BuCar - Conductor</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="reloj.css">
 </head>
 
 <body id="page-top">
@@ -32,8 +33,8 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <img src="img/Bucar_Logo.png"> </div>
-                <div class="sidebar-brand-text mx-3">BuCar-admin</div>
+                </div>
+                <div class="sidebar-brand-text mx-3">BuCar-Driver</div>
             </a>
 
             <!-- Divider -->
@@ -43,7 +44,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Verificaciones</span></a>
             </li>
 
             <!-- Divider -->
@@ -61,14 +62,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Estadísticas</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>Registro</span></a>
             </li>
 
             <!-- Divider -->
@@ -82,8 +83,8 @@
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                <p class="text-center mb-2"><strong>BuCar+</strong> Nuestra app se sustenta a los anuncios generados automáticamente, si quieres dejar de verlos, puedes pagar BuCar+</p>
+                <a class="btn btn-success btn-sm" href="">BuCar+</a>
             </div>
 
         </ul>
@@ -104,7 +105,7 @@
                     <!-- Topbar Search -->
                     <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="container">
-                            <h1>Contenido principal</h1>
+                            <img src="img/Bucar_Logo.png" width="200">
                         </div>
                     </form>
 
@@ -150,8 +151,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">Abril 13, 2019</div>
+                                        <span class="font-weight-bold">Nuevos usuarios han sido registrados en la página</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -161,8 +162,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">Marzo 27, 2022</div>
+                                        Métodos de pagos, aún no se aplicarán.
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -172,8 +173,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500">Marzo 5, 2022</div>
+                                        Alerta: Se están realizando modificaciones a la página.
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
@@ -270,14 +271,196 @@
             </div>
             <!-- End of Main Content -->
 
-            <!-- AQUÍ VAN LAS TABLAS DE CADA VISTA -->
+            <div class="container text-center mt-5">
+                <hr class="mt-5">
+
+                <hr class="mt-5">
+            </div>
+
+
+            <!-- Editable table -->
+            <div class="card">
+                <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Clientes pendientes confirmación:</h3>
+                <div class="card-body">
+                    <div id="table" class="table-editable">
+                        <table class="table table-borderless">
+
+                            <tbody>
+                                <tr>
+                                    <div class="container-clock">
+                                        <td><strong>Sección: <h4>Admin</h4></strong></td>
+
+                                        <td><strong>Fecha: <h4 id="date">date</h4></strong></td>
+
+                                        <td><strong> Hora: <h4 id="time">00:00:00</h4></strong></td>
+                                    </div>
+                                    <script src="reloj.js"></script>
+
+                                    <td><strong>Usuarios pendientes verificación: <h4><!--JS datos--></h4></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="table table-bordered table-responsive-md table-striped text-center">
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th class="text-center">Nombre</th>
+                                <th class="text-center">Usuario</th>
+                                <th class="text-center">Documento</th>
+                                <th class="text-center">Ruta inicio</th>
+                                <th class="text-center">Ruta fin</th>
+                                <th class="text-center">Aceptar o negar</th>
+                            </tr>
+                            <tr>
+                                <td class="pt-3-half" contenteditable="true">1</td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--NOMBRES DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td>
+                                    <span class="table-remove"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0">Aceptar</button></span>
+                                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Negar</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-3-half" contenteditable="true">2</td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--NOMBRES DATOS JS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+
+                                <td>
+                                    <span class="table-remove"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0">Aceptar</button></span>
+                                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Negar</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-3-half" contenteditable="true">3</td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--NOMBRES DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+
+                                <td>
+                                    <span class="table-remove"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0">Aceptar</button></span>
+                                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Negar</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-3-half" contenteditable="true">4</td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--NOMBRES DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+
+                                <td>
+                                    <span class="table-remove"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0">Aceptar</button></span>
+                                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Negar</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-3-half" contenteditable="true">5</td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--NOMBRES DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+
+                                <td>
+                                    <span class="table-remove"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0">Aceptar</button></span>
+                                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Negar</button></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="pt-3-half" contenteditable="true">6</td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--NOMBRES DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+                                <td class="pt-3-half" contenteditable="true">
+                                    <!--JS DATOS-->
+                                </td>
+
+                                <td>
+                                    <span class="table-remove"><button type="button" class="btn btn-primary btn-rounded btn-sm my-0">Aceptar</button></span>
+                                    <span class="table-remove"><button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Negar</button></span>
+                                </td>
+                            </tr>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!-- Footer -->
 
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Your Website 2022</span>
                     </div>
                 </div>
             </footer>
