@@ -16,11 +16,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="datatables/datatables.min.css">
     <link rel="stylesheet" type="text/css" href="datatables/DataTables-1.10.18/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="reloj.css">
     <link rel="stylesheet" href="AgrRmvDin.css">
+
+
 </head>
 
 <body id="page-top">
@@ -272,21 +275,56 @@
             </div>
             <!-- End of Main Content -->
 
-
-
-            <!-- Footer -->
-
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2022</span>
-                    </div>
+            <tbody>
+                <div class="container">
+                    <h1 class="title has-text-centered">Qué rutas deseas realizar</h1>
+                    <div id="jsonDiv"></div>
+                    <form action="" id="frmLugar">
+                        <label class="label">Lugar que deseas agregrar</label>
+                        <div class="field is-grouped">
+                            <div class="control has-icons-left">
+                                <input class="input" name="name" type="text" placeholder="Lugar" autocomplete="off">
+                                <span class="icon is-small is-left">
+                            <i class="fas fa-flag"></i>
+                          </span>
+                            </div>
+                            <button id="btnAgr" type="button" class="button is-success">
+                                <span class="icon is-small">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                                <span>Save</span>
+                              </button>
+                            <button id="btnSave" type="button" class="button is-info">
+                                <span>Guardar</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-cloud"></i>
+                                </span>
+                              </button>
+                        </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
+                </form>
+                <hr>
+                <div id="divElements">
 
+                </div>
         </div>
-        <!-- End of Content Wrapper -->
+
+
+        </tbody>
+        <script src="VistaUsr.js"></script>
+        <!-- Footer -->
+
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; BuCar - JeJuVa Inc. 2022</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
 
     </div>
     <!-- End of Page Wrapper -->
